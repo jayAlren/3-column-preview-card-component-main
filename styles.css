@@ -22,6 +22,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	font-family: Lexend Deca, sans-serif;
+	font-weight: 400;
+	font-size: 15px;
 }
 
 main {
@@ -37,7 +40,7 @@ main {
 }
 
 .contain {
-	
+	color: hsla(0, 0%, 100%, 0.75);
 /*	border: 2px solid blue;*/
 /*	border-radius: 10px;*/
 /*	background: hsla(179, 100%, 13%, .2);*/
@@ -47,20 +50,90 @@ main {
 	display: flex;
 	border: none;
 	border-radius: 10px;
+	overflow: hidden;
 	width: 850px;
-	height: 375px;
+	height: 450px;
 	background-color: hsla(179, 100%, 13%, .5);
 /*	border: 2px solid green;*/
 }
 
 .info-group-items {
-	padding: 0.625em;
-	
+	padding: 2.5em;
 }
 
-.items-1 {
-	background-color: hsl(31, 77%, 52%);
-	z-index: 1;
+.info-group-items:nth-of-type(1) {
+	background-color: hsl(31, 77%, 52%); /* Bright orange */
+}
+
+.info-group-items:nth-of-type(2) {
+	background-color: hsl(184, 100%, 22%); /* Dark cyan */
+}
+
+.info-group-items:nth-of-type(3) {
+	background-color: hsl(179, 100%, 13%); /* Very dark cyan */
+}
+
+.info-group-items-images {
+	padding: 0 0 1.25em 0;
+}
+
+.info-group-items h1 {
+	color: white;
+	font-family: Big Shoulders Display, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0 0 1.25em 0;
+}
+
+.info-group-items p {
+	line-height: 1.5;
+	padding: 0 0 3.125em 0;
+}
+
+.info-group-items-buttons {
+	font-family: Lexend Deca, sans-serif;
+	font-size: 1rem;
+	background-color: hsl(0, 0%, 95%);
+	padding: 10px 30px;
+	border: 2px solid hsl(0, 0%, 95%);;
+	border-radius: 30px;
+	outline: none;
+	cursor: pointer;
+}
+
+.info-group-items-buttons:hover {
+	border: 2px solid hsl(0, 0%, 95%);
+	color: hsl(0, 0%, 95%);
+	background-color: hsl(31, 77%, 52%); /* Bright orange */
+}
+
+.button-1 {
+	color: hsl(31, 77%, 52%); /* Bright orange */
+}
+
+.button-2 {
+	color: hsl(184, 100%, 22%); /* Dark cyan */
+}
+
+.button-3 {
+	color: hsl(179, 100%, 13%); /* Very dark cyan */
+}
+.button-1:hover {
+	border: 2px solid hsl(0, 0%, 95%);
+	color: hsl(0, 0%, 95%);
+	background-color: hsl(31, 77%, 52%); /* Bright orange */
+}
+
+.button-2:hover {
+	border: 2px solid hsl(0, 0%, 95%);
+	color: hsl(0, 0%, 95%);
+	background-color: hsl(184, 100%, 22%); /* Dark cyan */
+}
+
+.button-3:hover {
+	border: 2px solid hsl(0, 0%, 95%);
+	color: hsl(0, 0%, 95%);
+	background-color: hsl(179, 100%, 13%); /* Very dark cyan */
 }
 
 footer {
@@ -73,4 +146,24 @@ footer {
 
 footer a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 640px) {
+	body {
+		font-size: 1em;
+	}
+
+	.container {
+		padding: 50px 0;
+	}
+
+	.info-group {
+		flex-direction: column;
+		width: 500px;
+		height: auto;
+	}
+
+	.info-group-items {
+		padding: 4em;
+	}
 }
